@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>Tenshi Bot</title>
@@ -7,36 +8,77 @@
 <style>
 
 body{
-background:#1e1e2f;
-color:white;
+margin:0;
 font-family:Arial;
+background:linear-gradient(135deg,#1e1e2f,#2a0f4f,#1e1e2f);
+background-size:400% 400%;
+animation:bg 12s infinite;
+color:white;
 text-align:center;
-padding:40px;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.container{
+padding:60px 20px;
+}
+
+.avatar{
+width:140px;
+border-radius:50%;
+box-shadow:0 0 25px #a855f7;
 }
 
 h1{
-color:#a855f7;
+font-size:48px;
+color:#c084fc;
+margin-top:20px;
+}
+
+p{
+font-size:18px;
+opacity:0.9;
 }
 
 button{
+margin-top:20px;
 background:#a855f7;
 border:none;
-padding:15px 25px;
-font-size:18px;
+padding:18px 40px;
+font-size:20px;
 color:white;
-border-radius:10px;
+border-radius:12px;
 cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
 background:#9333ea;
+transform:scale(1.05);
 }
 
-.box{
-margin-top:40px;
-background:#2a2a40;
-padding:20px;
-border-radius:15px;
+.section{
+margin-top:60px;
+background:rgba(0,0,0,0.25);
+padding:30px;
+border-radius:20px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.commands{
+font-family:monospace;
+line-height:2;
+}
+
+footer{
+margin-top:60px;
+opacity:0.7;
 }
 
 </style>
@@ -45,36 +87,57 @@ border-radius:15px;
 
 <body>
 
+<div class="container">
+
+<img class="avatar" src="https://cdn.discordapp.com/embed/avatars/0.png">
+
 <h1>Tenshi</h1>
 
 <p>Um bot inteligente de Discord criado por Dzzn.</p>
 
 <a href="https://discord.com/oauth2/authorize?client_id=1480267754379542680&permissions=8&scope=bot">
+
 <button>Adicionar ao Discord</button>
+
 </a>
 
-<div class="box">
+</div>
+
+<div class="section">
 
 <h2>Comandos</h2>
 
-<p>
+<div class="commands">
+
 !userinfo<br>
 !avatar<br>
 !serverinfo<br>
 !rank<br>
 !botinfo<br>
-!credits
+!credits<br>
+!invite<br>
+!ping
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Sobre</h2>
+
+<p>
+Tenshi é um bot inteligente que conversa com usuários,
+possui sistema de níveis e vários comandos úteis.
 </p>
 
 </div>
 
-<div class="box">
-
-<h2>Créditos</h2>
+<footer>
 
 <p>Criado por Dzzn</p>
 
-</div>
+</footer>
 
 </body>
 </html>
